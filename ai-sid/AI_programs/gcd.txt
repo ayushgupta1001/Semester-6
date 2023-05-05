@@ -1,0 +1,15 @@
+gcd(A,B):-
+A==B,
+RESULT is A.
+
+gcd(A,B):-
+A==0,
+RESULT is B.
+
+gcd(A,B):-
+B==0,
+RESULT is A.
+
+gcd(A,B):-
+M1 is mod(A,B),
+gcd(B,M1).

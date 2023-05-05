@@ -1,0 +1,18 @@
+start:-
+writef("Enter the list : \n"),
+read([H|T]),nl,
+
+palindrome([H|T]).
+
+conc([],L,L).
+conc([X|L1],L2,[X|L3]):-
+conc(L1,L2,L3).
+
+palindrome([]):-
+writef('Given list is a palindrome').
+palindrome([_]):-
+writef('Given list is a palindrome').
+palindrome(L):-
+conc([Head|Tail], [Head], L),
+palindrome(Tail);
+writef('Not a palindrome').

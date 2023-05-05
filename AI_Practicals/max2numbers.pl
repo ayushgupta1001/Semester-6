@@ -1,0 +1,1 @@
+max(X,Y):-(X=Y->write('both are equal');X>Y->(M is X, write(M));(M is Y, write(M))).
